@@ -39,6 +39,7 @@ public class JpaTest {
 		Personne p = new Personne();
 		 
 		  List<Amis> amis= new ArrayList<Amis>();
+		  
 		
 		  Amis a= new Amis();
 		  Amis a1= new Amis();
