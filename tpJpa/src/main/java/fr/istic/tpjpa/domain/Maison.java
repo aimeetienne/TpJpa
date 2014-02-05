@@ -27,6 +27,12 @@ public class Maison {
     List<Equipements> equip=new ArrayList<Equipements>();
     
 
+	public List<Equipements> getEquip() {
+		return equip;
+	}
+	public void setEquip(List<Equipements> equip) {
+		this.equip = equip;
+	}
 	public String getAdresse() {
 		return adresse;
 	}

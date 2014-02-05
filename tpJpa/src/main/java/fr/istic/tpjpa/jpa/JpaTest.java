@@ -10,6 +10,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import fr.istic.tpjpa.domain.Amis;
+import fr.istic.tpjpa.domain.Equipements;
 import fr.istic.tpjpa.domain.Maison;
 import fr.istic.tpjpa.domain.Personne;
 import fr.istic.tpjpa.domain.Personne.Sexe;
@@ -39,12 +40,22 @@ public class JpaTest {
 		Personne p = new Personne();
 		 
 		  List<Amis> amis= new ArrayList<Amis>();
+		  List<Equipements> e= new ArrayList<Equipements>();
+		  Equipements eq= new Equipements();
 		  
-		
+		  eq.setLibelle("télé");
+		  eq.setLibelle("Ordi");
+		  eq.setLibelle("Radio");
+		  
+		  e.add(eq);
+		  
+		  
+		  
 		  Amis a= new Amis();
 		  Amis a1= new Amis();
 		Maison m= new Maison();
 		
+		m.setEquip(e);
 		
 		
 		
