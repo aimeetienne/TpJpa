@@ -19,13 +19,13 @@ public class Personne {
 
 public enum Sexe{M,F};
 	@Id
+
 	@GeneratedValue
 private long id_per;
-	
-	/*
-	 @OneToMany(mappedBy = "Personne", cascade = CascadeType.PERSIST) 
+  
+	 @ManyToMany(   cascade = CascadeType.PERSIST) 
 	private List<Amis> amis= new ArrayList<Amis>();
-	*/
+	
 	private String Nom;
 	private String Prenom;
 	private Sexe genre;
@@ -75,7 +75,7 @@ private long id_per;
 	public void setId(long id) {
 		this.id_per = id;
 	}
-	/*
+	
  
 	public  List<Amis> getA() {
 		return amis;
@@ -83,5 +83,5 @@ private long id_per;
 	public void addAmis (List<Amis> amis) {
 		this.amis= amis;
 	}
-*/
+
 }
