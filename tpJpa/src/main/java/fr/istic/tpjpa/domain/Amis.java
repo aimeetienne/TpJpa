@@ -11,9 +11,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
- 
 
- @Entity
+
+@Entity
 
 public class Amis {
 	@Id
@@ -21,7 +21,7 @@ public class Amis {
 	private long id_amis;
 	private String Nom;
 	private String prenom;
- 
+
 	@ManyToOne 
 	private Personne id_personne;
 	public long getId() {
@@ -55,6 +55,6 @@ public class Amis {
 	public void setId_personne(Personne id_personne) {
 		this.id_personne = id_personne;
 	}
-	
+
 
 }

@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -17,22 +18,29 @@ import javax.persistence.OneToMany;
 @Entity
 public class Personne {
 
-public enum Sexe{M,F};
+	@Enumerated
+	private Genre genres;
 	@Id
 
 	@GeneratedValue
-private long id_per;
-  
-	 @OneToMany( cascade = CascadeType.PERSIST) 
+	private long id_per;
+
+	public Genre getGenres() {
+		return genres;
+	}
+	public void setGenres(Genre genres) {
+		this.genres = genres;
+	}
+	@OneToMany( cascade = CascadeType.PERSIST) 
 	private List<Amis> amis= new ArrayList<Amis>();
-	
+
 	private String Nom;
 	private String Prenom;
-	private Sexe genre;
+	
 	private String mail;
 	private Date date_naiss;
 	private String profil;
- 
+
 	public String getNom() {
 		return Nom;
 	}
@@ -45,12 +53,7 @@ private long id_per;
 	public void setPrenom(String prenom) {
 		Prenom = prenom;
 	}
-	public Sexe getGenre() {
-		return genre;
-	}
-	public void setGenre(Sexe genre) {
-		this.genre = genre;
-	}
+	
 	public String getMail() {
 		return mail;
 	}
@@ -75,8 +78,8 @@ private long id_per;
 	public void setId(long id) {
 		this.id_per = id;
 	}
-	
-	
+
+
 	public  List<Amis> getA() {
 		return amis;
 	}

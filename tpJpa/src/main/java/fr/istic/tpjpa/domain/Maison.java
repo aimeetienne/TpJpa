@@ -16,16 +16,16 @@ public class Maison {
 	@Id
 	@GeneratedValue
 	private long id;
-	
+
 	private String adresse;
 	private int superficie;
 	private String ip_adresse;
 	private int nb_pieces;
-    private int nb_chauffage;
-    
-    @OneToMany( cascade=CascadeType.PERSIST)
-    List<Equipements> equip=new ArrayList<Equipements>();
-    
+	private int nb_chauffage;
+
+	@OneToMany( cascade=CascadeType.PERSIST)
+	List<Equipements> equip=new ArrayList<Equipements>();
+
 
 	public List<Equipements> getEquip() {
 		return equip;
@@ -69,6 +69,6 @@ public class Maison {
 	public void setId(long id) {
 		this.id = id;
 	}
-    
+
 
 }
